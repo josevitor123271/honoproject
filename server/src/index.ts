@@ -26,6 +26,11 @@ app.get("/api/nomes", (c) => {
   return c.json(require("./jsons/nomes.json"))
 });
 
+// Servindo uma tag
+app.get("/api/*", (c) => {
+  return c.html("<h1> API de Conversão de Moedas</h1>");
+})
+
 export default {
   port: 8080,
   fetch: app.fetch
